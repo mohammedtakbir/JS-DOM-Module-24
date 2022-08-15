@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal</title>
+    <style>
+        .grantParent{
+            margin: 0 auto;
+            width: 700px;
+            padding: 70px 50px;
+            border: 5px solid;
+            background-color: rgb(198, 62, 62);
+        }
+        .parent{
+            background-color: rgb(47, 135, 47);
+            width: 100%;
+            padding: 60px 0;
+            border: 5px solid;
+            margin: 0 auto;
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .child{
+            background-color: rgb(90, 181, 212);
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="grantParent" id="grandparent-id">
+        <div class="parent">
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+    </div>
+
+    <script>
+        /* const grandParent = document.getElementById('grandparent-id');
+        const parents =Array.from(document.getElementsByClassName('parent')); */
+
+        /* const grandParent = document.querySelector('#grandparent-id');
+        const grandParent = document.querySelector('.grantParent');
+        changeColor(grandParent); */
+
+        /* const parents = document.querySelectorAll('.parent');
+        changeColor(parents);
+        parents.forEach(changeColor); */
+
+        // children method
+        // use Array.form instead of for of loop
+        // and use forEach() method
+        /* const grandParent = document.querySelector('.grantParent');
+        const parents = Array.from(grandParent.children);
+        parents.forEach(changeColor); */
+
+        /* const grandParent = document.querySelector('.grantParent');
+        const childone = grandParent.querySelector('.child');
+        changeColor(childone); */
+
+        const grandParent = document.querySelector('.grantParent');
+        const childone = grandParent.querySelectorAll('.child');
+        childone.forEach(changeColor);
+        
+        // parents.forEach(changeColor);
+        // changeColor(parents)
+
+        function changeColor(element){
+            element.style.backgroundColor = '#333';
+        }
+    </script>
+</body>
+</html>

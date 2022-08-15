@@ -1,0 +1,15 @@
+header,h1{
+    color: lightcoral;
+}
+li{
+    color: tomato;
+}
+.important-places{
+    color: aqua;
+}
+.text-center{
+    text-align: center;
+}
+.large-text{
+    font-size: 2rem;
+}
