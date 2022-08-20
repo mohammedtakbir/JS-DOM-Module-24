@@ -1,12 +1,11 @@
 // * 1. getElementsByTagName()
-/* const liLists = document.getElementsByTagName('li');
-for(const liList of liLists){
-    liList.style.color = 'cyan';
+
+/* const allLi = document.getElementsByTagName('li');
+for(const li of allLi){
+    li.style.color = 'coral';
 }
-const all = document.getElementsByTagName('*');
-for(const everyElement of all){
-    everyElement.style.color = 'cyan'
-} */
+ */
+
 // * 2.getElementById()
 /* const favouriteTitle = document.getElementById('favourite-title');
 favouriteTitle.style.fontSize = '3rem';
@@ -35,18 +34,23 @@ for(const dressChild of dressChilds){
 } */
 
 // * getAttribute()
-/* const title1 = document.querySelector('#food-container');
-console.log(title1.getAttribute('class'))
-console.log(title1.getAttribute('id')) */
+/* const test = document.querySelector('#food-container');
+console.log(test.getAttribute('id'), test.getAttribute('class')); */
 
 // * setAttribute()
 /* const title2 = document.querySelector('#dress-container');
 console.log(title2.setAttribute('class', 'test'));
 console.log(title2.setAttribute('title', 'testing title attributes using tooltips')); */
+/* 
+const test1 = document.querySelector('#dress-list');
+const setId = test1.setAttribute('class', 'testing-setattribute') */
 
 // * removeAttribute()
 /* const title3 = document.querySelector('.remove-this-class-attribute');
 console.log(title3.removeAttribute('class')); */
+/* 
+const test3 = document.querySelector('.testing-setattribute');
+console.log(test3.removeAttribute('class')); */
 
 // * classList()
 /* const title4 = document.querySelector('#food-container');
@@ -60,10 +64,15 @@ console.log(title4.classList)
 title4.classList.replace('test5', 'newtest');
 console.log(title4.classList) */
 
+/* const test = document.querySelector('#food-container');
+test.classList.add('final-test', 'semi-test'); */
+
+
 // * innerHTML
 /* const placesLists = document.getElementsByClassName('places-list')[0].innerHTML;
-console.log(placesLists) */
+console.log(placesLists);
 
+ */
 
 // * innerText
 /* const food1 = document.querySelector('#food1');
@@ -86,7 +95,7 @@ console.log(placesLists.parentElement.parentElement); */
 const mainContainer = document.getElementById('main-container');
 
 // ? 2.what to be added
-const section = document.createElement('section');
+/* const section = document.createElement('section');
 const h1 = document.createElement('h1');
 h1.innerText = 'Favourite Car List';
 section.appendChild(h1);
@@ -107,6 +116,19 @@ ul.appendChild(li4);
 
 section.appendChild(ul)
 // ? add all the child
+mainContainer.appendChild(section); */
+
+const section = document.createElement('section');
+section.innerHTML = `
+<h1>Favourite Car List</h1>
+<ul>
+    <li>Porche 911 GTRS4</li>
+    <li>Audi RS6</li>
+    <li>BMW M8 Competition</li>
+    <li>Nissan GTR35</li>
+</ul>
+`;
+
 mainContainer.appendChild(section);
 
 // * children/chilsNodes
